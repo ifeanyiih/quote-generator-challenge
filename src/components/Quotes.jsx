@@ -9,6 +9,10 @@ const Div = styled.div`
     justify-content: center;
     flex-direction: column;
 
+    .quotes {
+        overflow-y: auto;
+    }
+
     h1 {
         font-family: "Raleway",
         font-weight: 700;

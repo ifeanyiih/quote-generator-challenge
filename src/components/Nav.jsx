@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {MdCached} from 'react-icons/md'
 import styled from 'styled-components'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useMatch, useLocation } from 'react-router-dom'
 
 const NavElem = styled.nav`
     display: flex;
@@ -37,7 +37,7 @@ const NavElem = styled.nav`
 `
 
 const Nav = () => {
-
+    const location = useLocation()
     let navigate = useNavigate();
 
 
@@ -45,7 +45,11 @@ const Nav = () => {
     <NavElem>
         <button
         onClick={() => {
-            navigate('/')
+           if (location.pathname == '/') {
+               navigate(0)
+           }else {
+               navigate('/')
+           }
         }}
         >random <MdCached/>
         </button>
