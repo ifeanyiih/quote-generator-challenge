@@ -22,7 +22,7 @@ const BlockQuote = styled.blockquote`
 
 const Quote = ({quoteText}) => {
   return (
-    <BlockQuote>
+    <BlockQuote className='blockquote'>
         <p>
             {quoteText}
         </p>

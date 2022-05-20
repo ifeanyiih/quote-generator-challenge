@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdArrowRightAlt } from 'react-icons/md'
 import styled from 'styled-components'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Btn = styled.button`
     display: block;
@@ -64,8 +65,18 @@ const Btn = styled.button`
 `
 
 const Author = ({quoteAuthor, quoteGenre}) => {
+
+    const location = useLocation()
+    const navigate = useNavigate()
+
   return (
-    <Btn>
+    <Btn
+        onClick={() => {
+           location.pathname = "/quotes";
+           location.state = quoteAuthor.toLowerCase();
+           navigate("/quotes", {state: quoteAuthor.toLowerCase()});
+        }}
+    >
         <div className="author">
             <div className="info">
                 <p>

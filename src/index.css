@@ -21,6 +21,9 @@
 }
 
 @media (min-width: 500px) {
+  .app {
+    max-inline-size: 1440px;
+  }
   .random {
     margin-block-start: 195px;
   }

@@ -13,7 +13,6 @@ const Random = () => {
         .then(response => response.json())
         .then(response => {
             let {data} = response;
-            console.log(data)
             setQuote(data[0]);
         })
     }

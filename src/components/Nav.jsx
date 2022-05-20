@@ -1,7 +1,7 @@
 import React from 'react'
 import {MdCached} from 'react-icons/md'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const NavElem = styled.nav`
     display: flex;
@@ -16,17 +16,18 @@ const NavElem = styled.nav`
     padding-block-end: 1rem;
     color: #4f4f4f;
     background: #fff;
-    
+
     button {
         display: flex;
         align-items: center;
-        text-decoration: none;
         gap: 11px;
         font-size: 18px;
         color: inherit;
         background: transparent;
         border: none;
         cursor: pointer;
+        font-family: inherit;
+        font-weight: inherit;
 
         svg {
             width: 1.5rem;
@@ -36,10 +37,19 @@ const NavElem = styled.nav`
 `
 
 const Nav = () => {
+
+    let navigate = useNavigate();
+
+
   return (
-      <NavElem>
-          <button>random <MdCached/></button>
-      </NavElem>
+    <NavElem>
+        <button
+        onClick={() => {
+            navigate('/')
+        }}
+        >random <MdCached/>
+        </button>
+    </NavElem>
   )
 }
 
