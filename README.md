@@ -90,4 +90,4 @@ $ npm start
 
 - Website [your-website.com](https://{your-web-site-link})
 - GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@HIIfeanyichukwu](https://twitter.com/HIIfeanyichukwu)
+- Twitter [@IhillaryI](https://twitter.com/IhillaryI)
